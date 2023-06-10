@@ -1,0 +1,10 @@
+Package: one.keycap.hidesuggestions
+Name: HideSuggestions
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Hide the app actions suggestions when using Spotlight.
+Maintainer: SingleKeycap
+Author: SingleKeycap
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.3), com.mrgcgamer.libgcuniversal (>= 1.6.0)
+Icon: https://repo.keycap.one/icons/HideSuggestions.png
