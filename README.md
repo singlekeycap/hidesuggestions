@@ -8,3 +8,5 @@ An awesome Spotlight MobileSubstrate tweak!
 - Hide the "do x action in y app" menu in Siri Suggestions
 - Theme Spotlight (background for now)
 - More coming soon!
+
+## This tweak is incomplete. Compile at your own (minimized) risk.
