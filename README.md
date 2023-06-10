@@ -10,3 +10,4 @@ An awesome Spotlight MobileSubstrate tweak!
 - More coming soon!
 
 ## This tweak is incomplete. Compile at your own (minimized) risk.
+Once complete, the tweak will be available on [my repo](https://repo.keycap.one) and the [releases](https://github.com/singlekeycap/hidesuggestions/releases) tab.
