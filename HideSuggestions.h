@@ -10,4 +10,8 @@
 
 @interface SPUIResultsViewController
 @property (nonatomic, weak) UIView *view;
+- (void)iterateThroughSubviews:(UIView *)view;
+@end
+
+@interface SearchUILabel : UILabel
 @end

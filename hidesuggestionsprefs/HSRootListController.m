@@ -10,7 +10,8 @@ NSArray *rootPreferenceKeys;
 			@"enableTweak",
 			@"hideSuggestions",
 			@"enableTheming",
-			@"backgroundColor"
+			@"backgroundColor",
+			@"siriSuggestionsText"
 		];
 		return [super init];
 	}
