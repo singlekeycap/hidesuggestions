@@ -6,23 +6,40 @@ BOOL hideSuggestions;
 BOOL enableTheming;
 UIColor *backgroundColor;
 
-%group spotlightTheming
+%group themerGroup
 
-%hook SBHomeScreenSpotlightViewController
-   -(void)viewWillAppear:(BOOL)arg1{
-        if(enableTheming){
-            [self.viewIfLoaded setBackgroundColor:(backgroundColor)];
-		}
-        return %orig;
-    }
+%hook SPUINavigationController
+
+	- (void)viewWillAppear: (BOOL) arg1{
+		[self.view setBackgroundColor:(backgroundColor)];
+		%orig;
+	}
+
 %end
 
-%hook SPUIRemoteSearchViewController
-	-(void)viewWillAppear:(BOOL)arg1{
-		if(hideSuggestions){
-			NSLog(@"[HideSuggestions] Spotlight children views: %@", self.viewIfLoaded.subviews);
+%end
+
+
+// THIS GROUP IS NON-FUNCTIONAL AT THE MOMENT
+%group hiderGroup
+
+%hook SPUIResultsViewController
+
+	- (void)viewWillAppear: (BOOL) arg1{
+		UIView *suggestionsView = self.view;
+		while (suggestionsView.subviews.count > 0) {
+			suggestionsView = suggestionsView.subviews[0];
+			NSLog(@"[HideSuggestions] Subview Classes: %@", NSStringFromClass([suggestionsView class]));
+			if ([NSStringFromClass([suggestionsView class]) isEqual: @"SearchUILabel"]) {
+				NSLog(@"[HideSuggestions] Attempting to change text");
+				
+				// Very poor attempt, doesn't work
+				UILabel *suggestionsLabel = (UILabel *)suggestionsView;
+				[suggestionsLabel setText:@"HSFTW"];
+				break;
+			}
 		}
-		return %orig;
+		%orig;
 	}
 
 %end
@@ -48,6 +65,11 @@ void updatePrefs(){
 	updatePrefs();
 
 	if(enableTweak){
-		%init(spotlightTheming);
+		if(hideSuggestions){
+			%init(hiderGroup);
+		}
+		if(enableTheming){
+			%init(themerGroup);
+		}
 	}
 }

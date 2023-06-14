@@ -1,6 +1,7 @@
-export TARGET := iphone:clang:latest:15.0
+export TARGET := iphone:clang:latest:14.0
 export ARCHS = arm64 arm64e
-INSTALL_TARGET_PROCESSES = SpringBoard
+export THEOS_SDK_DIR = $(THEOS)/sdks/iPhoneOS14.5.sdk
+INSTALL_TARGET_PROCESSES = Spotlight
 
 include $(THEOS)/makefiles/common.mk
 
