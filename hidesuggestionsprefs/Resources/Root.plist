@@ -54,9 +54,9 @@
 			<key>defaults</key>
 			<string>one.keycap.hidesuggestionsprefs</string>
 			<key>key</key>
-			<string>enableTheming</string>
+			<string>enableBackgroundColor</string>
 			<key>label</key>
-			<string>Enable Theming</string>
+			<string>Enable Background Color</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -77,6 +77,50 @@
 			<string>ffffffff</string>
 			<key>style</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>one.keycap.hidesuggestionsprefs</string>
+			<key>key</key>
+			<string>enableCellColor</string>
+			<key>label</key>
+			<string>Enable Cell Color</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>cellClass</key>
+			<string>GcColorPickerCell</string>
+			<key>label</key>
+			<string>Cell Color</string>
+			<key>defaults</key>
+			<string>one.keycap.hidesuggestionsprefs</string>
+			<key>key</key>
+			<string>cellColor</string>
+			<key>supportsAlpha</key>
+			<true/>
+			<key>safeOnDismiss</key>
+			<true/>
+			<key>fallback</key>
+			<string>ffffffff</string>
+			<key>style</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>one.keycap.hidesuggestionsprefs</string>
+			<key>key</key>
+			<string>enableSiriSuggestionsText</string>
+			<key>label</key>
+			<string>Enable Suggestions Text</string>
 		</dict>
 		<dict>
 			<key>cell</key>

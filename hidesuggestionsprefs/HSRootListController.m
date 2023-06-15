@@ -9,8 +9,11 @@ NSArray *rootPreferenceKeys;
 		rootPreferenceKeys = @[
 			@"enableTweak",
 			@"hideSuggestions",
-			@"enableTheming",
+			@"enableBackgroundColor",
 			@"backgroundColor",
+			@"enableCellColor",
+			@"cellColor",
+			@"enableSiriSuggestionsText",
 			@"siriSuggestionsText"
 		];
 		return [super init];
@@ -53,29 +56,8 @@ NSArray *rootPreferenceKeys;
 		self.navigationItem.rightBarButtonItem = respringButton; 
 	}
 
-	-(void)prefsChangeAlert {
-			UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Respring is required" message:@"To apply this change you must respring your device" preferredStyle:UIAlertControllerStyleAlert];
-			UIAlertAction* respringAction = [UIAlertAction actionWithTitle:@"Respring" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
-				[self respring];
-			}];
-			UIAlertAction* laterAction = [UIAlertAction actionWithTitle:@"Later" style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {}];
-			[alert addAction:respringAction];
-			[alert addAction:laterAction];
-			[self presentViewController:alert animated:YES completion:nil];
-	}
 	-(void)setPreferenceValue:(id)value specifier:(PSSpecifier*)specifier{
 		[super setPreferenceValue:value specifier:specifier];
-		if([rootPreferenceKeys containsObject:specifier.properties[@"key"]]){
-
-			if([specifier.properties[@"cell"] isEqual:@"PSSwitchCell"]){
-				if(!(BOOL)specifier.properties[@"value"]==[[prefs objectForKey:specifier.properties[@"key"]] boolValue]){
-						// [self prefsChangeAlert];
-				}
-			}
-			else {
-				[self prefsChangeAlert];
-			}
-		}
 	}
 
 @end

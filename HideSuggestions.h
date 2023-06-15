@@ -4,14 +4,17 @@
 #import <GcUniversal/GcColorPickerUtils.h>
 #import <rootless.h>
 
+@interface SearchUILabel : UILabel
+@end
+
 @interface SPUINavigationController
 @property (nonatomic, weak) UIView *view;
 @end
 
-@interface SPUIResultsViewController
-@property (nonatomic, weak) UIView *view;
-- (void)iterateThroughSubviews:(UIView *)view;
+@interface SearchUICardSectionCollectionViewCell : UIView
 @end
 
-@interface SearchUILabel : UILabel
+@interface SearchUIResultsCollectionViewController
+@property (nonatomic, weak) UIView *view;
+- (void)iterateThroughSubviews:(UIView *)view;
 @end
