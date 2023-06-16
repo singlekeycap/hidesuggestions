@@ -5,7 +5,7 @@ NSArray *rootPreferenceKeys;
 
 @implementation HSRootListController
 	-(id)init {
-		prefs = [[NSUserDefaults alloc] initWithSuiteName:@"one.keycap.hidesuggestionsprefs"];
+		prefs = [[NSUserDefaults alloc] initWithSuiteName:@"one.keycap.hidesuggestions"];
 		rootPreferenceKeys = @[
 			@"enableTweak",
 			@"hideSuggestions",

@@ -14,7 +14,5 @@
 @interface SearchUICardSectionCollectionViewCell : UIView
 @end
 
-@interface SearchUIResultsCollectionViewController
-@property (nonatomic, weak) UIView *view;
-- (void)iterateThroughSubviews:(UIView *)view;
+@interface SearchUICollectionView : UICollectionView
 @end

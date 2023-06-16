@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>hidesuggestionsprefs</string>
 	<key>CFBundleIdentifier</key>
-	<string>one.keycap.hidesuggestionsprefs</string>
+	<string>one.keycap.hidesuggestions</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>
